@@ -137,5 +137,5 @@ it('lookUptokenIdToStarInfo test', async() => {
     let starId = 11;
     await instance.createStar('lookupTokenIdToStarInfo test', starId, {from: accounts[0]});
 
-    assert.equal(await instance.lookupTokenIdToStarInfo(starId), 'lookupTokenIdToStarInfo test');
+    assert.equal(await instance.lookUptokenIdToStarInfo(starId), 'lookupTokenIdToStarInfo test');
 });
