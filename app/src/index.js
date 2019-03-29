@@ -31,6 +31,11 @@ const App = {
     status.innerHTML = message;
   },
 
+  setLookup: function(message) {
+    const lookup = document.getElementById("lookup");
+    lookup.innerHTML = message;
+  },
+
   createStar: async function() {
     const { createStar } = this.meta.methods;
     const name = document.getElementById("starName").value;
@@ -41,10 +46,10 @@ const App = {
 
   // Implement Task 4 Modify the front end of the DAPP
   lookup: async function (){
-    const { lookupTokenIdToStarInfo }  = this.meta.methods;
+    const { lookUptokenIdToStarInfo }  = this.meta.methods;
     const id = document.getElementById("lookid").value;
 
-    await lookupTokenIdToStarInfo(id).call().then((name) => {
+    await lookUptokenIdToStarInfo(id).call().then((name) => {
        App.setLookup("Star: Id = " + id + ", Name = " +name);
     });
   }
